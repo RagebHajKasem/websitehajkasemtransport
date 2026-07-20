@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haj Kasem Transport | Logistik & Import/Export</title>
+    <meta name="description" content="Professionelle Transport-, Fracht- und Import/Export-Lösungen für zuverlässige globale Logistik." />
+    <style>
+        :root {
+            --primary: #0f3d5e;
+            --primary-dark: #0a2b42;
+            --accent: #f4b400;
+            --text: #21313c;
+            --muted: #6c7a87;
+            --bg: #f6f8fb;
+            --white: #ffffff;
+            --border: #e6ebf0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html {
+            scroll-behavior: smooth;
+            min-height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+        main { flex: 1; }
+
+        a { text-decoration: none; color: inherit; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: min(1150px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(10, 43, 66, 0.9), rgba(15, 61, 94, 0.8)), url('images/background.png') center/cover no-repeat;
+            color: var(--white);
+            padding: 20px 0 80px;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0 30px;
+        }
+
+        .brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand img {
+            height: 48px;
+            width: auto;
+            display: block;
+            border-radius: 8px;
+            background: var(--white);
+            padding: 3px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            margin-left: 20px;
+            font-weight: 600;
+            opacity: 0.95;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 32px;
+            align-items: center;
+            padding: 20px 0 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.02rem;
+            color: #dce8f1;
+            margin-bottom: 24px;
+            max-width: 650px;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover { transform: translateY(-2px); }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.35);
+            color: var(--white);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+
+        .hero-card ul {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .hero-card li {
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .hero-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        main { padding: 40px 0 70px; }
+
+        section { margin-bottom: 32px; }
+
+        .section-title {
+            font-size: 1.7rem;
+            margin-bottom: 16px;
+            color: var(--primary-dark);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(15, 61, 94, 0.06);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 24px;
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            color: var(--muted);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font: inherit;
+        }
+
+        .contact-form button {
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 24px 0;
+        }
+
+        @media (max-width: 900px) {
+            .hero,
+            .about,
+            .contact,
+            .services,
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links a {
+                margin: 8px 0;
+                padding: 10px 12px;
+                width: 100%;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+            .hero {
+                gap: 24px;
+                padding-top: 10px;
+            }
+
+            .hero h1 { font-size: 2.4rem; }
+            .hero p { font-size: 1rem; }
+
+            .hero-card,
+            .card,
+            .contact-form input,
+            .contact-form textarea,
+            .job-form input,
+            .job-form textarea,
+            .job-form select {
+                width: 100%;
+            }
+
+            .btn-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .brand img {
+                height: 42px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="brand">
+                    <img src="images/logo.png" alt="Haj Kasem Transport Logo" />
+                    <span>Haj Kasem Transport</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Startseite</a>
+                    <a href="about.html">Über uns</a>
+                    <a href="contact.html">Kontakt</a>
+                    <a href="job.html">Karriere</a>
+                </div>
+            </nav>
+
+            <div class="hero">
+                <div>
+                    <h1>Professionelle Transporte & Import/Export-Lösungen</h1>
+                    <p>Wir bieten zuverlässige Logistik, Frachtkoordination und internationale Handelsunterstützung mit Präzision, Transparenz und Engagement für jede Sendung.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="contact.html">Angebot anfragen</a>
+                        <a class="btn btn-secondary" href="about.html">Über uns</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <h3>Warum Unternehmen uns wählen</h3>
+                    <ul>
+                        <li>Zuverlässiger nationaler und internationaler Transport</li>
+                        <li>Effiziente Abwicklung von Zoll und Import/Export</li>
+                        <li>Persönliche Betreuung und klare Kommunikation</li>
+                        <li>Pünktliche Lieferung mit Sicherheit und Verlässlichkeit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="services">
+                <h2 class="section-title">Unsere Dienstleistungen</h2>
+                <div class="services">
+                    <div class="card">
+                        <h3>Transport</h3>
+                        <p>Sichere und effiziente Beförderung von Fracht auf nationalen und internationalen Routen.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Importdienstleistungen</h3>
+                        <p>Umfassende Unterstützung bei der Ankunft von Waren, Zollabwicklung und Lieferorganisation.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Exportdienstleistungen</h3>
+                        <p>Professionelle Exportplanung, Dokumentation und Sendungsverfolgung für den internationalen Handel.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="stats">
+                    <div class="stat"><strong>Global</strong><span>Handelsnetzwerk</span></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Haj Kasem Transport. Alle Rechte vorbehalten.</p>
+            <p>Telefon: +49 1573 2235820 | E-Mail: info@hajkasemtransport.de</p>
+            <!-- Creator: Ahmad Zein -->
+        </div>
+    </footer>
+</body>
+</html>

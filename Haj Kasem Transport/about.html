@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Über uns | Haj Kasem Transport</title>
+    <meta name="description" content="Über Haj Kasem Transport: professionelle Transport- und Import/Export-Dienstleistungen." />
+    <style>
+        :root {
+            --primary: #0f3d5e;
+            --primary-dark: #0a2b42;
+            --accent: #f4b400;
+            --text: #21313c;
+            --muted: #6c7a87;
+            --bg: #f6f8fb;
+            --white: #ffffff;
+            --border: #e6ebf0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            min-height: 100%;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+        main { flex: 1; }
+        a { text-decoration: none; color: inherit; }
+        .container { width: min(1150px, calc(100% - 32px)); margin: 0 auto; }
+        header { background: linear-gradient(135deg, rgba(10, 43, 66, 0.9), rgba(15, 61, 94, 0.8)), url('images/background.png') center/cover no-repeat; color: var(--white); padding: 20px 0 80px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0 30px; }
+        .brand { font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; display: flex; align-items: center; gap: 10px; }
+        .brand img { height: 48px; width: auto; display: block; border-radius: 8px; background: var(--white); padding: 3px; }
+        .nav-links a { color: var(--white); margin-left: 20px; font-weight: 600; opacity: 0.95; }
+        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: center; padding: 20px 0 0; }
+        .hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; line-height: 1.2; }
+        .hero p { font-size: 1.02rem; color: #dce8f1; margin-bottom: 24px; max-width: 650px; }
+        .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 18px; border-radius: 8px; font-weight: 700; transition: transform 0.2s ease; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--accent); color: var(--primary-dark); }
+        .btn-secondary { border: 1px solid rgba(255,255,255,0.35); color: var(--white); }
+        main { padding: 40px 0 70px; }
+        .section-title { font-size: 1.7rem; margin-bottom: 16px; color: var(--primary-dark); }
+        .card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 24px; box-shadow: 0 8px 24px rgba(15, 61, 94, 0.06); }
+        .card h2 { margin-bottom: 12px; }
+        .about-columns { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; }
+        .contact-summary p { margin-bottom: 12px; color: var(--muted); }
+        footer { background: var(--primary-dark); color: var(--white); text-align: center; padding: 24px 0; }
+        @media (max-width: 900px) {
+            .hero,
+            .about-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links a {
+                margin: 8px 0;
+                padding: 10px 12px;
+                width: 100%;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+            .hero {
+                gap: 24px;
+                padding-top: 10px;
+            }
+
+            .hero h1 { font-size: 2.4rem; }
+            .hero p { font-size: 1rem; }
+
+            .btn-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .brand img {
+                height: 42px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="brand">
+                    <img src="images/logo.png" alt="Haj Kasem Transport Logo" />
+                    <span>Haj Kasem Transport</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Startseite</a>
+                    <a href="about.html">Über uns</a>
+                    <a href="contact.html">Kontakt</a>
+                    <a href="job.html">Karriere</a>
+                </div>
+            </nav>
+            <div class="hero">
+                <div>
+                    <h1>Über Haj Kasem Transport</h1>
+                    <p>Unsere Firma bietet professionelle Transport- und Import/Export-Dienstleistungen mit Fokus auf Zuverlässigkeit, Sicherheit und kundenspezifischen Lösungen.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="contact.html">Kontakt</a>
+                        <a class="btn btn-secondary" href="index.html">Zur Startseite</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <h3>Unsere Werte</h3>
+                    <ul>
+                        <li>Verlässlichkeit</li>
+                        <li>Transparenz</li>
+                        <li>Effizienz</li>
+                        <li>Persönlicher Service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="about-columns">
+                <div class="card">
+                    <h2>Unsere Geschichte</h2>
+                    <p>Haj Kasem Transport wurde gegründet, um Unternehmen und Kunden in der Logistikbranche eine sichere, schnelle und transparente Transportlösung zu bieten. Mit jahrelanger Erfahrung in Import und Export unterstützen wir Sie bei jeder Sendung.</p>
+                </div>
+                <div class="card">
+                    <h2>Was uns auszeichnet</h2>
+                    <p>Wir bieten dabei eine klare Kommunikation, eine zuverlässige Zollabwicklung und einen persönlichen Ansprechpartner für jede Anfrage. Unser Ziel ist es, den Handelsverkehr für unsere Kunden so einfach wie möglich zu gestalten.</p>
+                </div>
+            </section>
+            <section class="card contact-summary">
+                <h2 class="section-title">Weiterführende Informationen</h2>
+                <p>Wenn Sie mehr über unsere Dienstleistungen erfahren möchten, besuchen Sie die Kontaktseite oder senden Sie uns eine Nachricht über das Kontaktformular.</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Haj Kasem Transport. Alle Rechte vorbehalten.</p>
+            <p>Telefon: +49 1573 2235820 | E-Mail: info@hajkasemtransport.de</p>
+            <!-- Creator: Ahmad Zein -->
+        </div>
+    </footer>
+</body>
+</html>
